@@ -1,0 +1,6 @@
+@OpenBid.SearchService.Api_HostAddress = http://localhost:5145
+
+GET {{OpenBid.SearchService.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
