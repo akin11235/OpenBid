@@ -2,10 +2,4 @@
   <Folder Name="/services/">
     <File Path="docker-compose.yml" />
   </Folder>
-  <Folder Name="/services/auction-service/" />
-  <Folder Name="/services/auction-service/src/">
-    <Project Path="services/OpenBid.AuctionService.Api/OpenBid.AuctionService.Api.csproj" />
-    <Project Path="services/OpenBid.AuctionService.Entities/OpenBid.AuctionService.Entities.csproj" />
-  </Folder>
-  <Folder Name="/services/search-service/" />
 </Solution>
