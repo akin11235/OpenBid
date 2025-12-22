@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/services/">
+    <File Path="docker-compose.yml" />
+  </Folder>
+  <Folder Name="/services/auction-service/" />
+  <Folder Name="/services/auction-service/src/">
+    <Project Path="services/AuctionService.Api/AuctionService.Api.csproj" />
+    <Project Path="services/AuctionService.Entities/AuctionService.Entities.csproj" />
+  </Folder>
+</Solution>
