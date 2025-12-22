@@ -13,7 +13,7 @@ builder.Services.AddControllers();
 // Install the package `Microsoft.EntityFrameworkCore` and `Microsoft.EntityFrameworkCore.Relational` if not already installed
 builder.Services.AddDbContext<AuctionDbContext>(opt =>
 { opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
-        b => b.MigrationsAssembly("AuctionService.Api")); 
+        b => b.MigrationsAssembly("OpenBid.AuctionService.Api")); 
 
 });
 
