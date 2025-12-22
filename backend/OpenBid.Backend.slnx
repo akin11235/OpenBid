@@ -1,5 +1,8 @@
 <Solution>
   <Folder Name="/services/">
     <File Path="docker-compose.yml" />
+    <Project Path="services/auction-service/OpenBid.AuctionService.Api/OpenBid.AuctionService.Api.csproj" />
+    <Project Path="services/auction-service/OpenBid.AuctionService.Entities/OpenBid.AuctionService.Entities.csproj" />
+    <Project Path="services/search-service/OpenBid.SearchService.Api/OpenBid.SearchService.Api.csproj" Id="7710bc1f-b521-4562-bf5e-d823c8be3342" />
   </Folder>
 </Solution>
