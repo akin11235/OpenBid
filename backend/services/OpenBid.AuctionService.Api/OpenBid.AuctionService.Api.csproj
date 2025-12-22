@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AuctionService.Entities\AuctionService.Entities.csproj" />
+    <ProjectReference Include="..\OpenBid.AuctionService.Entities\OpenBid.AuctionService.Entities.csproj" />
   </ItemGroup>
 
 </Project>
