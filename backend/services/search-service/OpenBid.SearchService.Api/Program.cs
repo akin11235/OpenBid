@@ -1,6 +1,4 @@
-using MongoDB.Driver;
-using MongoDB.Entities;
-using OpenBid.SearchService.Api.Models;
+using MassTransit;
 using OpenBid.SearchService.Api.Services;
 using Polly;
 using Polly.Extensions.Http;
@@ -18,6 +16,14 @@ namespace OpenBid.SearchService.Api
 
             builder.Services.AddControllers();
             builder.Services.AddHttpClient<AuctionSvcHttpClient>().AddPolicyHandler(GetPolicy());
+
+            builder.Services.AddMassTransit(x =>
+            {
+                x.UsingRabbitMq((context, cfg) =>
+                {
+                    cfg.ConfigureEndpoints(context);
+                });
+            });
 
             var app = builder.Build();
 
