@@ -33,6 +33,12 @@ namespace OpenBid.SearchService.Api
 
                 x.UsingRabbitMq((context, cfg) =>
                 {
+                    cfg.ReceiveEndpoint("search-auction-created", e =>
+                    {
+                        e.UseMessageRetry(r => r.Interval(5, 5));
+                        e.ConfigureConsumer<AuctionCreatedConsumer>(context);
+                    });
+
                     cfg.ConfigureEndpoints(context);
                 });
             });

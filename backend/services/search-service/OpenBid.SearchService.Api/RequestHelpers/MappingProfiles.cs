@@ -9,6 +9,7 @@ namespace OpenBid.SearchService.Api.RequestHelpers
         public MappingProfiles()
         {
             CreateMap<AuctionCreated, Item>();
+            CreateMap<AuctionUpdated, Item>();
         }
     }
 }
