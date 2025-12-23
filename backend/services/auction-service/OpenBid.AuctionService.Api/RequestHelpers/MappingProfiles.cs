@@ -2,6 +2,7 @@
 using AuctionService.Entities;
 using AutoMapper;
 using Entities;
+using Openbid.AuctionService.Contracts;
 
 namespace AuctionService.Api.RequestHelpers
 {
@@ -15,6 +16,9 @@ namespace AuctionService.Api.RequestHelpers
                 ForMember(d => d.Item, o => o.MapFrom(s => s));
 
             CreateMap<CreateAuctionDto, Item>();
+            CreateMap<AuctionDto, AuctionCreated>();
+            CreateMap<Auction, AuctionUpdated>().IncludeMembers(a => a.Item);
+            CreateMap<Item, AuctionUpdated>();
         }
     }
 }
