@@ -203,3 +203,52 @@ This balances:
 - ✅ Flexibility to refine work before sharing
 
 **For your search service:** Make commits as you add features, push at the end of each coding session or when you want to create a PR.
+
+Perfect! Let's do this step by step:
+
+**1. Move identity-service temporarily:**
+
+```powershell
+Move-Item services/identity-service/ ../identity-service-temp/
+```
+
+**2. Switch to main and pull latest:**
+
+```powershell
+git checkout main
+git pull origin main
+```
+
+**3. Clean up the old feature branch locally:**
+
+```powershell
+git branch -d feature/rabbitmq-event-bus
+```
+
+**4. Create new feature branch:**
+
+```powershell
+git checkout -b feature/identity-service
+```
+
+**5. Move identity-service back:**
+
+```powershell
+Move-Item ../identity-service-temp/ services/identity-service/
+```
+
+**6. Add, commit, and push:**
+
+```powershell
+git add services/identity-service/
+git commit -m "Add identity service with Duende IdentityServer"
+git push origin feature/identity-service
+```
+
+Now you have:
+
+- ✅ Latest code from GitHub on main
+- ✅ Clean separation of identity service work
+- ✅ Ready to develop and create a new PR
+
+Let me know if you hit any issues!

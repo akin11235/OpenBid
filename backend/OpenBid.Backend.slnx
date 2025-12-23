@@ -3,6 +3,7 @@
     <Project Path="contracts/Openbid.AuctionService.Contracts/Openbid.AuctionService.Contracts.csproj" Id="42a16712-d346-43f0-adc8-fe032e495c33" />
     <Project Path="services/auction-service/OpenBid.AuctionService.Api/OpenBid.AuctionService.Api.csproj" />
     <Project Path="services/auction-service/OpenBid.AuctionService.Entities/OpenBid.AuctionService.Entities.csproj" />
+    <Project Path="services/identity-service/OpenBid.IdentityService.Api/OpenBid.IdentityService.Api.csproj" />
     <Project Path="services/search-service/OpenBid.SearchService.Api/OpenBid.SearchService.Api.csproj" Id="7710bc1f-b521-4562-bf5e-d823c8be3342" />
   </Folder>
 </Solution>
