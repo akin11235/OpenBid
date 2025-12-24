@@ -252,3 +252,48 @@ Now you have:
 - ✅ Ready to develop and create a new PR
 
 Let me know if you hit any issues!
+
+Here's the complete workflow:
+
+## 1. Save to GitHub
+
+```powershell
+git add -A
+git commit -m "Add identity service with Duende IdentityServer and update auction service integration"
+git push origin feature/identity-service
+```
+
+## 2. Create PR on GitHub
+
+- Go to your repo on GitHub
+- Click "Compare & pull request"
+- Review changes and click "Create pull request"
+- **Merge the PR** when ready
+
+## 3. Update Local Main
+
+```powershell
+# Switch to main
+git checkout main
+
+# Pull latest (includes merged identity-service)
+git pull origin main
+
+# Clean up feature branch
+git branch -d feature/identity-service
+```
+
+## 4. Create Gateway Service Feature Branch
+
+```powershell
+# Create and switch to new feature branch
+git checkout -b feature/gateway-service
+
+# Create the gateway service (if not already created)
+# cd services
+# dotnet new webapi -n OpenBid.GatewayService.Api
+```
+
+Now you're ready to work on the gateway service! 🚀
+
+Want me to help you set up the gateway service (like using Ocelot or YARP for API Gateway)?
